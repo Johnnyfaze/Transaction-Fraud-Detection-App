@@ -1,5 +1,4 @@
-`
 gradio
 pandas
 scikit-learn
-joblib
+pickle
