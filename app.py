@@ -1,10 +1,10 @@
 # libraies importation
 import gradio as gr
-import joblib
+import pickle
 import pandas as pd
 
 # Load the trained pipeline
-pipeline = joblib.load("fraud_detection_model.pkl")
+pipeline = pickle.load(open("fraud_detection_model.pkl", "rb"))
 
 def predict_fraud(type, amount, oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest):
     # Prepare input as a DataFrame
